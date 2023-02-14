@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Insert</title>
+  </head>
+  <body>
+    <input type="text" placeholder="position ..." id="position" />
+    <input type="text" placeholder="element ..." id="newEl" />
+    <button onclick="addEl()">Add Elements</button>
+  </body>
+  <script>
+    let data = [1, 25, 87, 54, 96, 3, 45, 24];
+    let newEl = document.getElementById("newEl").value;
+    newEl = parseInt(newEl)
+    let position = document.getElementById("position").value;
+    position = parseInt(position)
+    // console.warn(typeof newEl,typeof position);
+
+    // data.splice(2,0,{name:'talha'}) // built in methods
+    console.warn(data);
+    function addEl() {
+      for (let i = data.length - 1; i >= 0; i--) {
+        if (i >= position) {
+          data[i + 1] = data[i];
+          if (i === position) {
+            data[i] = newEl;
+          }
+        }
+      }
+      console.warn(data);
+    }
+  </script>
+</html>

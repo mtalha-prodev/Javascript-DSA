@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Searching</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let data = [12,10,20,3,40,60,80,99,60]
+    let item = 60
+    let index = []
+    for (let i = 0; i < data.length; i++) {
+        if(data[i] === item){
+            // index
+            index[i] = i
+            // arry value
+            index[i] = data[i]
+            break
+        }        
+    }
+    console.warn(index)
+    // default method index
+    index = data.indexOf(item,index)
+    console.warn(index)
+</script>
+
+</html>
